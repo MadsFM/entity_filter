@@ -1,0 +1,32 @@
+# Test your FastAPI endpoints
+
+GET http://127.0.0.1:8000/
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:8000/hello/User
+Accept: application/json
+
+###
+
+POST http://127.0.0.1:8000/entities
+Accept: application/json
+
+{
+  "text": "Allan is selling his new Audi",
+  "lang": "en"
+}
+
+###
+
+POST http://127.0.0.1:8000/tokenize
+Accept: application/json
+
+{
+  "text": "Peter sælger pizzaer i Fredericia",
+  "lang": "da"
+}
+
+###
+
