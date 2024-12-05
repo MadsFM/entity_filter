@@ -34,6 +34,7 @@ class Entity(Base):
     id = Column(Integer, primary_key=True, index=True)
     text = Column(String, nullable=False)
     label = Column(BigInteger, nullable=False)
+    entity_id = Column(BigInteger, nullable=True)
     source_text_id = Column(Integer, ForeignKey("source_texts.id"))
 
     # Relationships
