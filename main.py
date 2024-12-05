@@ -17,7 +17,7 @@ app = FastAPI(
 def read_root():
     return {"message": "Welcome to my version of SpaCy"}
 
-@app.post("/entities", response_model=EntityResponse, summary="Save entities from text", description="Extracts entities from text and saves them.")
+@app.post("/entities", response_model=EntityResponse, summary="Save entities from text", description="Extracts entities from text and saves them in a database.")
 def save_entities(request: TextInput, db: Session = Depends(get_db)):
     entities = extract_entities(request.text, request.lang)
     source_text = SourceText(text=request.text)
