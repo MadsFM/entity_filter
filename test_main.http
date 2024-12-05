@@ -12,6 +12,7 @@ Accept: application/json
 
 POST http://127.0.0.1:8000/entities
 Accept: application/json
+Content-Type: application/json
 
 {
   "text": "Allan is selling his new Audi",
@@ -22,6 +23,7 @@ Accept: application/json
 
 POST http://127.0.0.1:8000/tokenize
 Accept: application/json
+Content-Type: application/json
 
 {
   "text": "Peter sælger pizzaer i Fredericia",
